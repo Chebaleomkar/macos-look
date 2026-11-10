@@ -1,0 +1,45 @@
+[org/gnome/desktop/interface]
+gtk-theme='WhiteSur-Dark'
+icon-theme='WhiteSur-dark'
+cursor-theme='WhiteSur-cursors'
+font-name='Inter 11'
+document-font-name='Inter 11'
+color-scheme='prefer-dark'
+accent-color='blue'
+enable-hot-corners=true
+enable-animations=true
+clock-format='24h'
+
+[org/gnome/desktop/wm/preferences]
+button-layout='close,minimize,maximize:appmenu'
+
+[org/gnome/shell/extensions/user-theme]
+name='WhiteSur-Dark'
+
+[org/gnome/shell/extensions/dash-to-dock]
+dock-position='BOTTOM'
+autohide=true
+dock-fixed=false
+manualhide=false
+intellihide=false
+require-pressure-to-show=false
+show-delay=0.1
+hide-delay=0.2
+animation-time=0.2
+extend-height=false
+always-center-icons=true
+click-action='minimize'
+dash-max-icon-size=48
+autohide-in-fullscreen=false
+show-mounts=false
+
+[org/gnome/shell/extensions/just-perfection]
+activities-button=false
+clock-menu-position=1
+panel-in-overview=true
+
+[org/gnome/shell/extensions/rounded-window-corners-reborn]
+border-width=0
+skip-libadwaita-app=false
+skip-libhandy-app=false
+global-rounded-corner-settings={'padding': <{'left': <uint32 1>, 'right': <uint32 1>, 'top': <uint32 1>, 'bottom': <uint32 1>}>, 'keepRoundedCorners': <{'maximized': <true>, 'fullscreen': <false>}>, 'borderRadius': <uint32 18>, 'smoothing': <0.6>, 'borderColor': <[0.5, 0.5, 0.5, 1.0]>, 'enabled': <true>}

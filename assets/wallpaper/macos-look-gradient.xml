@@ -1,0 +1,21 @@
+<background>
+  <starttime>
+    <year>2026</year>
+    <month>1</month>
+    <day>1</day>
+    <hour>0</hour>
+    <minute>0</minute>
+    <second>0</second>
+  </starttime>
+  <static>
+    <duration>86400.0</duration>
+    <file>
+      <size width="3840" height="2160"/>
+      <gradient>
+        <start color="#241040"/>
+        <end color="#f3a17a"/>
+        <angle>0.7071</angle>
+      </gradient>
+    </file>
+  </static>
+</background>

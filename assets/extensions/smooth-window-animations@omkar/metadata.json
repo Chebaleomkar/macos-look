@@ -1,0 +1,7 @@
+{
+  "uuid": "smooth-window-animations@omkar",
+  "name": "Smooth Window Animations",
+  "description": "Slows down and smooths maximize/unmaximize transitions. GNOME otherwise plays them at a fixed 250 ms with a fast-start easing curve.",
+  "shell-version": ["45", "46", "47", "48", "49", "50"],
+  "version": 1
+}
