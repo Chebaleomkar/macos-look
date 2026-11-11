@@ -39,14 +39,14 @@ run_repo_installer() {
 install_gtk_theme() {
     prepare_repo WhiteSur-gtk-theme https://github.com/vinceliuice/WhiteSur-gtk-theme.git
     local repo=$REPO_DIR
-    run_repo_installer "$repo" -c "$THEME_VARIANT" -l --silent-mode
+    run_repo_installer "$repo" -c "$THEME_VARIANT" -l
     ok "WhiteSur GTK + GNOME Shell theme installed ($THEME_VARIANT)"
 }
 
 install_icons() {
     prepare_repo WhiteSur-icon-theme https://github.com/vinceliuice/WhiteSur-icon-theme.git
     local repo=$REPO_DIR
-    run_repo_installer "$repo" --silent-mode
+    run_repo_installer "$repo"
     if (( ! DRY_RUN )); then
         local dir
         for dir in "$DATA_HOME"/icons/WhiteSur*; do

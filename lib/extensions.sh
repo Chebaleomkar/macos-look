@@ -178,7 +178,7 @@ if raw and not raw.startswith('@'):
 want = sys.argv[2:]
 out = [u for u in cur if u != 'ubuntu-dock@ubuntu.com' and u not in want]
 out.extend(u for u in want if u not in out)
-print('[' + ', '.join("'%s'" % u for u in out) + ']')
+print('@as [' + ', '.join("'%s'" % u for u in out) + ']')
 PY
 )
 
@@ -196,7 +196,7 @@ if raw and not raw.startswith('@'):
 
 drop = set(sys.argv[2:]) | {'ubuntu-dock@ubuntu.com'}
 out = [u for u in cur if u not in drop]
-print('[' + ', '.join("'%s'" % u for u in out) + ']')
+print('@as [' + ', '.join("'%s'" % u for u in out) + ']')
 PY
 )
 

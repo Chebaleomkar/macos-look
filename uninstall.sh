@@ -83,10 +83,10 @@ remove_extensions() {
 
 remove_theme() {
     if [[ -x "$CACHE_DIR/src/WhiteSur-gtk-theme/install.sh" ]]; then
-        run env -C "$CACHE_DIR/src/WhiteSur-gtk-theme" bash ./install.sh -r --silent-mode || true
+        run env -C "$CACHE_DIR/src/WhiteSur-gtk-theme" bash ./install.sh -r || true
     fi
     if [[ -x "$CACHE_DIR/src/WhiteSur-icon-theme/install.sh" ]]; then
-        run env -C "$CACHE_DIR/src/WhiteSur-icon-theme" bash ./install.sh -r --silent-mode || true
+        run env -C "$CACHE_DIR/src/WhiteSur-icon-theme" bash ./install.sh -r || true
     fi
 
     local dir
@@ -130,11 +130,12 @@ reset_settings() {
     run dconf reset -f /org/gnome/shell/extensions/user-theme/
     run dconf reset -f /org/gnome/shell/extensions/blur-my-shell/
 
-    run gsettings reset org.gnome.desktop.wm.preferences button-layout
-    run gsettings reset org.gnome.desktop.interface color-scheme
-    run gsettings reset org.gnome.desktop.interface accent-color
-    run gsettings reset org.gnome.desktop.interface clock-format
-    run gsettings reset org.gnome.desktop.interface enable-hot-corners
+    run dconf reset /org/gnome/desktop/wm/preferences/button-layout
+    run dconf reset /org/gnome/desktop/interface/color-scheme
+    run dconf reset /org/gnome/desktop/interface/accent-color
+    run dconf reset /org/gnome/desktop/interface/clock-format
+    run dconf reset /org/gnome/desktop/interface/enable-hot-corners
+    run dconf reset /org/gnome/desktop/interface/gtk-theme
 
     local themes=(/usr/share/themes/Yaru-dark /usr/share/themes/Yaru /usr/share/themes/Adwaita)
     local theme
@@ -209,7 +210,7 @@ out = [u for u in cur if u not in ours]
 if reenable_ubuntu_dock and 'ubuntu-dock@ubuntu.com' not in out:
     out.insert(0, 'ubuntu-dock@ubuntu.com')
 
-print('[' + ', '.join("'%s'" % u for u in out) + ']')
+print('@as [' + ', '.join("'%s'" % u for u in out) + ']')
 PY
 )
 
